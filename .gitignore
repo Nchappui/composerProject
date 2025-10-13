@@ -26,5 +26,6 @@ tmp*
 nbproject
 .idea
 
-vendor
+/vendor
+vendor/
 core/node_modules
