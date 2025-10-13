@@ -25,9 +25,6 @@ class RSVPBlock extends BlockBase{
      */
     public function build(){
 
-        return[
-            '#type' => 'markup',
-            '#markup' => $this->t('My RSVP List Block'),
-        ];
+        return \Drupal::formBuilder()->getForm('Drupal\rsvplist\Form\RSVPForm');
     }
 }
