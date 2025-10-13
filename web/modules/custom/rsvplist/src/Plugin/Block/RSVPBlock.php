@@ -27,4 +27,18 @@ class RSVPBlock extends BlockBase{
 
         return \Drupal::formBuilder()->getForm('Drupal\rsvplist\Form\RSVPForm');
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function blockAccess(AccountInterface $account){
+        // If viewing a node, get the fully loaded node object.
+        $node = \Drupal::routeMatch()->getParameter('node');
+
+        if(!(is_null($node))){
+            return AccessResult::allowedIfHasPermission($account, 'view rsvplist');
+        }else{
+            return AccessResult::forbidden();
+        }
+    }
 }
