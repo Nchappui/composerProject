@@ -1,0 +1,8 @@
+rsvplist.exempleroute:
+  path: '/temporaryroute'
+  defaults:
+    _form: '\Drupal\rsvplist\Form\RSVPForm'
+    _title: 'Demo email submission form'
+  requirements:
+    _permission: 'view rsvplist'
+

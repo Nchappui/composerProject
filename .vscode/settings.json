@@ -1,0 +1,9 @@
+{
+    "yaml.schemas": {
+        "https://www.schemastore.org/drupal-info.json": "file:///home/nchappui/workspace/composerProject/web/modules/custom/mymodule/mymodule.info.yml",
+        "https://www.schemastore.org/drupal-routing.json": [
+            "file:///home/nchappui/workspace/composerProject/web/modules/custom/mymodule/mymodule.routing.yml",
+            "file:///home/nchappui/workspace/composerProject/web/modules/custom/rsvplist/rsvplist.routing.yml"
+        ]
+    }
+}
