@@ -88,15 +88,15 @@ class ReportController extends ControllerBase {
     // a structure compatible with what we need, we could populate the
     // $table_rows variable like so:
     /**
-      $table_rows = [];
-      // Load the entries from database.
-      $rsvp_entries = $this->load();
-
-      // Go through each entry and add it to $rows.
-      // Ultimately each array will be rendered as a row in an HTML table.
-      foreach ($rsvp_entries as $entry) {
-        $table_rows[] = $entry;
-      }
+      * $table_rows = [];
+      * // Load the entries from database.
+      * $rsvp_entries = $this->load();
+    *
+      * // Go through each entry and add it to $rows.
+      * // Ultimately each array will be rendered as a row in an HTML table.
+      * foreach ($rsvp_entries as $entry) {
+      *   $table_rows[] = $entry;
+      * }
      */
 
     // Create the render array for rendering an HTML table.
