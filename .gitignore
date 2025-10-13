@@ -28,4 +28,5 @@ nbproject
 
 /vendor
 vendor/
+web/sites
 core/node_modules
