@@ -54,6 +54,6 @@ class RSVPSettingsForm extends ConfigFormBase {
 
         $this->config('rsvplist.settings')->set('allowed_types', $selected_allowed_types)->save();
 
-        parent::subitForm($form, $form_state);
+        parent::submitForm($form, $form_state);
     }
 }
