@@ -7,7 +7,7 @@
 
 namespace Drupal\rsvplist\Form;
 
-use Drupal\Core\Form\configFormBase;
+use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 class RSVPSettingsForm extends ConfigFormBase {
