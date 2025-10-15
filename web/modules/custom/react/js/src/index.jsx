@@ -1,18 +1,18 @@
-import React from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './components/App';
-import SecondApp from './components/SecondApp';
+import ClickerApp from './components/ClickerApp';
+import SliderApp from './components/SliderApp';
+import React from 'react';
 
 document.addEventListener('DOMContentLoaded', function() {
   // Premier block - tous les conteneurs
-  document.querySelectorAll('.react-app').forEach(container => {
+  document.querySelectorAll('.react-clicker-app').forEach(container => {
     const root = createRoot(container);
-    root.render(<App />);
+    root.render(<ClickerApp />);
   });
 
   // Second block - tous les conteneurs
-  document.querySelectorAll('.react-app-2').forEach(container => {
+  document.querySelectorAll('.react-slider-app').forEach(container => {
     const root = createRoot(container);
-    root.render(<SecondApp />);
+    root.render(<SliderApp />);
   });
 });

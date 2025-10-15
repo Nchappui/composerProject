@@ -21,9 +21,9 @@ class ClickerBlock extends BlockBase {
   public function build() {
     $build = [];
     $build['react_clicker_block'] = [
-      '#markup' => '<div class="react-app"></div>',
+      '#markup' => '<div class="react-clicker-app"></div>',
       '#attached' => [
-        'library' => ['react/react_app']
+        'library' => ['react/react_clicker_app']
       ],
     ];
     return $build;

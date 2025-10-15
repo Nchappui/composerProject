@@ -1,11 +1,11 @@
-react_app:
+react_clicker_app:
   version: 1.0
   js:
     js/dist/main.min.js: {}
   dependencies:
     - core/drupal
 
-react_app_2:
+react_slider_app:
   version: 1.0
   js:
     js/dist/main.min.js: {}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const App = () => {
+const ClickerApp = () => {
   const [count, setCount] = React.useState(0);
   return (
         <div>
@@ -13,4 +13,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default ClickerApp;

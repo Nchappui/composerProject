@@ -16,9 +16,9 @@ class SliderBlock extends BlockBase {
   public function build() {
     $build = [];
     $build['react_slider_block'] = [
-      '#markup' => '<div class="react-app-2"></div>',
+      '#markup' => '<div class="react-slider-app"></div>',
       '#attached' => [
-        'library' => ['react/react_app_2']
+        'library' => ['react/react_slider_app']
       ],
     ];
     return $build;
