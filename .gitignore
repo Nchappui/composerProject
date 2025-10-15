@@ -30,3 +30,4 @@ nbproject
 vendor/
 web/sites
 core/node_modules
+themes/react_example_theme/js/dist_dev
