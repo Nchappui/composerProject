@@ -1,5 +1,4 @@
 import React from 'react';
-import SliderComponent from './Slider';
 
 const App = () => {
   const [count, setCount] = React.useState(0);
@@ -10,9 +9,6 @@ const App = () => {
       <button onClick={() => setCount(count + 1)}>
         Click me
       </button>
-      <div>
-        <SliderComponent/>
-      </div>
     </div>
 
   );

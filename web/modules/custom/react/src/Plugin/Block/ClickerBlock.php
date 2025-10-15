@@ -6,21 +6,21 @@ use Drupal\Core\Block\BlockBase;
 
 
 /**
- * Provides a 'ReactBlock' block.
+ * Provides a 'ClickerBlock' block.
  * 
  * @Block(
- *   id = "react_block",
- *   admin_label = @Translation("React block")
+ *   id = "react_clicker_block",
+ *   admin_label = @Translation("React clicker block")
  * )
 */
-class ReactBlock extends BlockBase {
+class ClickerBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
    */
   public function build() {
     $build = [];
-    $build['react_block'] = [
+    $build['react_clicker_block'] = [
       '#markup' => '<div id="react-app"></div>',
       '#attached' => [
         'library' => ['react/react_app']

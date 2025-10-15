@@ -2,7 +2,7 @@ import { Slider } from '@mui/material';
 import React from 'react';
 
 
-const SliderComponent = () => {
+const SecondApp = () => {
 
   return (
     <div>
@@ -12,4 +12,4 @@ const SliderComponent = () => {
   );
 };
 
-export default SliderComponent;
+export default SecondApp;

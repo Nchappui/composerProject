@@ -1,4 +1,13 @@
 react_app:
   version: 1.0
   js:
-    js/dist/main.min.js: {minified: true}
+    js/dist/main.min.js: {}
+  dependencies:
+    - core/drupal
+
+react_app_2:
+  version: 1.0
+  js:
+    js/dist/main.min.js: {}
+  dependencies:
+    - core/drupal
