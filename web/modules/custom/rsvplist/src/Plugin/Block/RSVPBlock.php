@@ -32,16 +32,16 @@ class RSVPBlock extends BlockBase{
      * {@inheritdoc}
      */
     public function blockAccess(AccountInterface $account){
-        // If viewing a node, get the fully loaded node object.
-        $node = \Drupal::routeMatch()->getParameter('node');
+    // If viewing a node, get the fully loaded node object.
+    $node = \Drupal::routeMatch()->getParameter('node');
 
-        if(!(is_null($node))){
-            $enabler = \Drupal::service('rsvplist.enabler');
-            if($enabler->isEnabled($node)){   
+    if (!is_null($node)) {
+        $enabler = \Drupal::service('rsvplist.enabler');
+        if ($enabler->isEnabled($node)) {   
             return AccessResult::allowedIfHasPermission($account, 'view rsvplist');
-            }
-        }else{
-            return AccessResult::forbidden();
         }
+        return AccessResult::forbidden();  // Ajout d'un retour par défaut si isEnabled() est false
+    }
+    return AccessResult::forbidden();
     }
 }
