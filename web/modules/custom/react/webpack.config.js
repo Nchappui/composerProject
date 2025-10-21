@@ -13,6 +13,10 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+    externals: {
+    'drupal': 'Drupal',
+    'drupalSettings': 'drupalSettings',
+  },
   module: {
     rules: [
       {
