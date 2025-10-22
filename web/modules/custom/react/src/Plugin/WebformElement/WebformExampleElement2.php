@@ -21,12 +21,14 @@ use Drupal\webform\WebformSubmissionInterface;
  * @see \Drupal\webform\Plugin\WebformElementInterface
  * @see \Drupal\webform\Annotation\WebformElement
  */
-class WebformExampleElement2 extends WebformElementBase {
+class WebformExampleElement2 extends WebformElementBase
+{
 
   /**
    * {@inheritdoc}
    */
-  public function getDefaultProperties() {
+  public function getDefaultProperties()
+  {
     // Here you define your webform element's default properties,
     // which can be inherited.
     //
@@ -44,7 +46,8 @@ class WebformExampleElement2 extends WebformElementBase {
   /**
    * {@inheritdoc}
    */
-  public function prepare(array &$element, WebformSubmissionInterface $webform_submission = NULL) {
+  public function prepare(array &$element, WebformSubmissionInterface $webform_submission = NULL)
+  {
     parent::prepare($element, $webform_submission);
 
     // Here you can customize the webform element's properties.
@@ -57,7 +60,8 @@ class WebformExampleElement2 extends WebformElementBase {
   /**
    * {@inheritdoc}
    */
-  public function form(array $form, FormStateInterface $form_state) {
+  public function form(array $form, FormStateInterface $form_state)
+  {
     $form = parent::form($form, $form_state);
     // Here you can define and alter a webform element's properties UI.
     // Form element property visibility and default values are defined via
@@ -67,5 +71,4 @@ class WebformExampleElement2 extends WebformElementBase {
     // @see \Drupal\webform\Plugin\WebformElement\TextBase::form
     return $form;
   }
-
 }

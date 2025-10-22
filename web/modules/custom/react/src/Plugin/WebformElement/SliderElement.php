@@ -17,19 +17,22 @@ use Drupal\webform\WebformSubmissionInterface;
  *   default_key = "react_slider"
  * )
  */
-class SliderElement extends WebformElementBase {
+class SliderElement extends WebformElementBase
+{
 
   /**
    * {@inheritdoc}
    */
-  public function getDefaultProperties() {
+  public function getDefaultProperties()
+  {
     return ['default_value' => '30'] + parent::getDefaultProperties();
   }
 
   /**
    * {@inheritdoc}
    */
-  public function prepare(array &$element, WebformSubmissionInterface $webform_submission = NULL) {
+  public function prepare(array &$element, WebformSubmissionInterface $webform_submission = NULL)
+  {
     parent::prepare($element, $webform_submission);
 
     $element['#type'] = 'hidden';

@@ -18,14 +18,16 @@ use Drupal\Core\Form\FormStateInterface;
  *   }
  * )
  */
-class ReactSliderWidget extends WidgetBase {
+class ReactSliderWidget extends WidgetBase
+{
 
   /**
    * {@inheritdoc}
    */
-  public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
+  public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state)
+  {
     $value = isset($items[$delta]->value) ? $items[$delta]->value : '';
-    
+
     $element += [
       '#type' => 'container',
       '#attributes' => [

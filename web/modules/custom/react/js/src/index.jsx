@@ -22,7 +22,7 @@ const initializeReactComponents = (context = document) => {
 };
 
 // Pour le chargement initial
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   initializeReactComponents();
 });
 

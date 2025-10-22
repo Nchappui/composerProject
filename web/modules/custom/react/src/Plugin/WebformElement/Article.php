@@ -16,26 +16,30 @@ use Drupal\webform\WebformSubmissionInterface;
  *   category = @Translation("Custom"),
  * )
  */
-class Article extends WebformElementBase {
+class Article extends WebformElementBase
+{
 
     /**
      * {@inheritdoc}
      */
-    public function getDefaultProperties() {
+    public function getDefaultProperties()
+    {
         return ['title' => ''];
     }
 
     /**
      * {@inheritdoc}
      */
-    public function form(array $form, FormStateInterface $form_state) {
+    public function form(array $form, FormStateInterface $form_state)
+    {
         return $form;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function prepare(array &$element, WebformSubmissionInterface $webform_submission = NULL) {
+    public function prepare(array &$element, WebformSubmissionInterface $webform_submission = NULL)
+    {
         $element['#type'] = 'value';
         parent::prepare($element, $webform_submission);
     }
@@ -43,7 +47,8 @@ class Article extends WebformElementBase {
     /**
      * {@inheritdoc}
      */
-    public function preSave(array &$element, WebformSubmissionInterface $webform_submission) {
+    public function preSave(array &$element, WebformSubmissionInterface $webform_submission)
+    {
         $source_data = $webform_submission->getElementData('article');
         $webform_submission->setElementData('article_1', $source_data);
     }
@@ -51,7 +56,8 @@ class Article extends WebformElementBase {
     /**
      * {@inheritdoc}
      */
-    public function buildExportHeader(array $element, array $options) {
+    public function buildExportHeader(array $element, array $options)
+    {
         return [
             $this->t('Title'),
             $this->t('URL'),
@@ -62,7 +68,8 @@ class Article extends WebformElementBase {
     /**
      * {@inheritdoc}
      */
-    public function buildExportRecord(array $element, WebformSubmissionInterface $webform_submission, array $export_options) {
+    public function buildExportRecord(array $element, WebformSubmissionInterface $webform_submission, array $export_options)
+    {
         $entity_id = $this->getValue($element, $webform_submission);
 
         if ($entity_id && ($entity = $this->entityTypeManager->getStorage('node')->load($entity_id))) {
@@ -80,6 +87,4 @@ class Article extends WebformElementBase {
 
         return parent::buildExportRecord($element, $webform_submission, $export_options);
     }
-
-
 }

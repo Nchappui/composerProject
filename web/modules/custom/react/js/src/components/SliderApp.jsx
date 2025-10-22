@@ -5,7 +5,7 @@ const SliderApp = () => {
   const containerRef = useRef(null);
   const [value, setValue] = useState(30);
   const [initialized, setInitialized] = useState(false);
-  
+
   const getHiddenInput = () => {
     if (!containerRef.current) return null;
     const wrapper = containerRef.current.closest('.react-slider-wrapper');
@@ -14,7 +14,7 @@ const SliderApp = () => {
 
   useEffect(() => {
     if (initialized) return;
-    
+
     setTimeout(() => {
       const input = getHiddenInput();
       if (input) {
@@ -27,7 +27,7 @@ const SliderApp = () => {
 
   useEffect(() => {
     if (!initialized) return;
-    
+
     const input = getHiddenInput();
     if (input) {
       input.value = value;
@@ -39,14 +39,14 @@ const SliderApp = () => {
   return (
     <div ref={containerRef}>
       <Slider
-        value={value} 
+        value={value}
         onChange={(_, newValue) => setValue(newValue)}
-        aria-label="Temperature" 
-        color="secondary" 
-        step={10} 
-        marks 
+        aria-label="Temperature"
+        color="secondary"
+        step={10}
+        marks
         min={10}
-        max={100} 
+        max={100}
         valueLabelDisplay="on"
       />
     </div>

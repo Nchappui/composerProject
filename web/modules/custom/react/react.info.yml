@@ -1,6 +1,6 @@
 name: React
 type: module
-description: 'A module for basic React components.'
+description: "A module for basic React components."
 core_version_requirement: ^11
 dependencies:
   - drupal:field

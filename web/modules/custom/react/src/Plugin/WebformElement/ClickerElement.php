@@ -15,13 +15,16 @@ use Drupal\webform\WebformSubmissionInterface;
  *   default_key = "react_clicker"
  * )
  */
-class ClickerElement extends WebformElementBase {
+class ClickerElement extends WebformElementBase
+{
 
-  public function getDefaultProperties() {
+  public function getDefaultProperties()
+  {
     return ['default_value' => '0'] + parent::getDefaultProperties();
   }
 
-  public function prepare(array &$element, WebformSubmissionInterface $webform_submission = NULL) {
+  public function prepare(array &$element, WebformSubmissionInterface $webform_submission = NULL)
+  {
     parent::prepare($element, $webform_submission);
 
     $element['#type'] = 'hidden';
@@ -31,35 +34,35 @@ class ClickerElement extends WebformElementBase {
     $element['#prefix'] = '<div class="react-clicker-wrapper"><div class="react-clicker-app"></div>';
     $element['#suffix'] = '</div>';
   }
-  
+
   // getValue(), formatHtmlItem(), formatTextItem() peuvent être supprimées
   // La classe parente les gère déjà correctement
 
 
-//   /**
-//    * {@inheritdoc}
-//    */
-//   public function getValue(array $element, WebformSubmissionInterface $webform_submission, array $options = []) {
-//     $value = $webform_submission->getElementData($element['#webform_key']);
-//     return $value ?? '0';
-//   }
+  //   /**
+  //    * {@inheritdoc}
+  //    */
+  //   public function getValue(array $element, WebformSubmissionInterface $webform_submission, array $options = []) {
+  //     $value = $webform_submission->getElementData($element['#webform_key']);
+  //     return $value ?? '0';
+  //   }
 
-//   /**
-//    * {@inheritdoc}
-//    */
-//   public function formatHtmlItem(array $element, WebformSubmissionInterface $webform_submission, array $options = []) {
-//     $value = $this->getValue($element, $webform_submission, $options);
-//     return [
-//       '#markup' => (string) $value,
-//     ];
-//   }
+  //   /**
+  //    * {@inheritdoc}
+  //    */
+  //   public function formatHtmlItem(array $element, WebformSubmissionInterface $webform_submission, array $options = []) {
+  //     $value = $this->getValue($element, $webform_submission, $options);
+  //     return [
+  //       '#markup' => (string) $value,
+  //     ];
+  //   }
 
-//   /**
-//    * {@inheritdoc}
-//    */
-//   protected function formatTextItem(array $element, WebformSubmissionInterface $webform_submission, array $options = []) {
-//     $value = $this->getValue($element, $webform_submission, $options);
-//     return (string) $value;
-//   }
-   
+  //   /**
+  //    * {@inheritdoc}
+  //    */
+  //   protected function formatTextItem(array $element, WebformSubmissionInterface $webform_submission, array $options = []) {
+  //     $value = $this->getValue($element, $webform_submission, $options);
+  //     return (string) $value;
+  //   }
+
 }

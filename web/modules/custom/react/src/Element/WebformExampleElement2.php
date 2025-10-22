@@ -23,12 +23,14 @@ use Drupal\Core\Form\FormStateInterface;
  * @see https://api.drupal.org/api/drupal/namespace/Drupal%21Core%21Render%21Element
  * @see \Drupal\webform_example_element\Element\WebformExampleElement
  */
-class WebformExampleElement2 extends FormElement {
+class WebformExampleElement2 extends FormElement
+{
 
   /**
    * {@inheritdoc}
    */
-  public function getInfo() {
+  public function getInfo()
+  {
     $class = get_class($this);
     return [
       '#input' => TRUE,
@@ -51,7 +53,8 @@ class WebformExampleElement2 extends FormElement {
   /**
    * Processes a 'webform_example_element2' element.
    */
-  public static function processWebformElementExample2(&$element, FormStateInterface $form_state, &$complete_form) {
+  public static function processWebformElementExample2(&$element, FormStateInterface $form_state, &$complete_form)
+  {
     // Here you can add and manipulate your element's properties and callbacks.
     return $element;
   }
@@ -59,7 +62,8 @@ class WebformExampleElement2 extends FormElement {
   /**
    * Webform element validation handler for #type 'webform_example_element'.
    */
-  public static function validateWebformExampleElement2(&$element, FormStateInterface $form_state, &$complete_form) {
+  public static function validateWebformExampleElement2(&$element, FormStateInterface $form_state, &$complete_form)
+  {
     // Here you can add custom validation logic.
   }
 
@@ -74,11 +78,11 @@ class WebformExampleElement2 extends FormElement {
    * @return array
    *   The $element with prepared variables ready for theme_element().
    */
-  public static function preRenderWebformExampleElement2(array $element) {
+  public static function preRenderWebformExampleElement2(array $element)
+  {
     $element['#attributes']['type'] = 'text';
     Element::setAttributes($element, ['id', 'name', 'value', 'size', 'maxlength', 'placeholder']);
     static::setAttributes($element, ['form-text', 'webform-example-element2']);
     return $element;
   }
-
 }

@@ -4,7 +4,7 @@ const ClickerApp = () => {
   const containerRef = useRef(null);
   const [count, setCount] = useState(0);
   const [initialized, setInitialized] = useState(false);
-  
+
   const getHiddenInput = () => {
     if (!containerRef.current) return null;
     const wrapper = containerRef.current.closest('.react-clicker-wrapper');
@@ -13,7 +13,7 @@ const ClickerApp = () => {
 
   useEffect(() => {
     if (initialized) return;
-    
+
     setTimeout(() => {
       const input = getHiddenInput();
       if (input) {
@@ -26,7 +26,7 @@ const ClickerApp = () => {
 
   useEffect(() => {
     if (!initialized) return;
-    
+
     const input = getHiddenInput();
     if (input) {
       input.value = count;
@@ -38,8 +38,8 @@ const ClickerApp = () => {
   return (
     <div ref={containerRef}>
       <p>Counter: {count}</p>
-      <button 
-        type="button" 
+      <button
+        type="button"
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();

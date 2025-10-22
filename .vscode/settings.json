@@ -5,5 +5,6 @@
             "file:///home/nchappui/workspace/composerProject/web/modules/custom/mymodule/mymodule.routing.yml",
             "file:///home/nchappui/workspace/composerProject/web/modules/custom/rsvplist/rsvplist.routing.yml"
         ]
-    }
+    },
+    "intelephense.environment.phpVersion": "8.3"
 }
